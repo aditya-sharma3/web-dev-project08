@@ -9,7 +9,7 @@
  */
 nav{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-top: 30px;
     vertical-align: top;
 }
@@ -81,4 +81,109 @@ h4{
     position: relative;
     top: 560px;
     left: 0px;
+}
+
+/* TOGGLE button styling here */
+.nav {
+    display: none;
+}
+
+#toggle {
+    display: none;
+}
+
+label{
+    display: none;
+}
+
+/* media query here */
+@media screen and (max-width: 768px) {
+    body {
+        margin: 0;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+    .nav-items .nav-item {
+        display: none;
+    }
+
+    nav button {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .backcover{
+       display: none;
+    }
+
+    .left-section h1 {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .left-section h4 {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .intro-section{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .imgs-div {
+        width: 100%;
+    }
+
+    .imgs-div .right-image {
+        width: 100%;
+    }
+
+    /* toogle menu here */
+    .nav {
+        display: block;
+        border-bottom: 1px solid #EAEAEB;
+        text-align: right;
+    }
+
+    .menu {
+        margin: 0 30px 0 0;
+        width: 100%;
+        text-align: center;
+        display: none;
+    }
+
+    .menu a {
+        display: block;
+        text-decoration: none;
+        border-bottom: 1px solid #EAEAEB;
+        line-height: 60px;
+        color: #9e5df0;
+    }
+
+    .menu a:hover{
+        background-color: #9e5df0;
+        color: #ffffff;
+    }
+
+    label{
+        display: block;
+        font-size: 26px;
+        /* width: 26px; */
+        float: right;
+        cursor: pointer;
+        /* margin-bottom: 40px; */
+    }
+
+    label:hover{
+        box-shadow: 2px 2px 5px #EAEAEB;
+    }
+    /* code for toggeling */
+    #toggle:checked + .menu {
+        display: block;
+    }
 }
